@@ -33,7 +33,7 @@ fi
 echo
 
 echo "vImage headers:"
-find "$HEADERS" -type f | sort
+find -L "$HEADERS" \( -type f -o -type l \) | sort
 echo
 
 echo "Relevant declarations:"
