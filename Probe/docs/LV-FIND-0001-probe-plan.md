@@ -50,3 +50,17 @@ No custom AltiVec kernel is allowed before the native baseline is measured.
 ## Status
 
 Open.
+
+## Phase 1 Result
+
+Completed on Mac OS X 10.5.8 PowerPC.
+
+Recorded result:
+
+- `Probe/results/LV-FIND-0001-vimage-header-inventory-10.5.8-ppc.txt`
+
+Initial conclusion:
+
+Leopard-native vImage provides substantial ARGB/RGBA coverage. The next phase
+must build a scalar reference and vImage baseline before any custom AltiVec
+kernel is considered.
