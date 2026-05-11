@@ -100,3 +100,28 @@ No claim about unused or suboptimal Apple behavior is made yet.
 
 Open.
 
+## Phase 1 Result
+
+Header inventory on Mac OS X 10.5.8 PowerPC shows substantial vImage coverage
+for common ARGB/RGBA image operations.
+
+Observed API families include:
+
+- Alpha blending
+- Premultiply and unpremultiply
+- ARGB and RGBA 8888 / FFFF variants
+- Planar/interleaved conversion
+- Channel overwrite, select, and permute
+- RGB565 and ARGB1555 conversion
+- RGB888 conversion and flattening
+- Scaling and geometry operations
+- Convolution
+- Histogram operations
+- Morphology
+- Matrix multiply
+
+Initial conclusion:
+
+vImage is a strong native Leopard baseline for general image and pixel
+operations. Custom LeoVec AltiVec kernels are not justified for broad RGBA
+workloads until correctness and performance measurements show a specific gap.
